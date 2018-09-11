@@ -11,7 +11,7 @@ Points to be considered:
 •	It make it simple and fast for business owners and developers to create smart contracts and blockchain applications to solve business problems.
 •	Build with JavaScript
 •	including node.js, npm, CLI and popular editors (vscode),
-•	 primary goal is to accelerate time to value
+•	primary goal is to accelerate time to value
 •	Make it easier to integrate your blockchain applications with the existing business systems.
 •	Hyperledger Composer supports the existing Hyperledger Fabric blockchain infrastructure and runtime, which supports pluggable blockchain consensus protocols to ensure that transactions are validated according to policy by the designated business network participants.
 
@@ -32,6 +32,7 @@ This BND get packaged up into archieve file with .bna extention
 # Hyperledger Composer Architecture
 
 Hyperledger Composer is composed of the following high-level components:
+
 •	Execution Runtimes
 •	JavaScript SDK
 •	Command Line Interface
@@ -102,6 +103,7 @@ Note that the Business Networks you create can also be deployed to Hyperledger F
 
 Installing pre-requisite on Ubuntu:
 The following are prerequisites for installing the required development tools:
+
 •	Operating Systems: Ubuntu Linux 14.04 / 16.04 LTS (both 64-bit), or Mac OS 10.12
 •	Docker Engine: Version 17.03 or higher
 •	Docker-Compose: Version 1.8 or higher
@@ -110,7 +112,9 @@ The following are prerequisites for installing the required development tools:
 •	git: 2.9.x or higher
 •	Python: 2.7.x
 •	A code editor of your choice, we recommend VSCode.
+
 *Note:
+
 •	Login as a normal user, rather than root.
 •	Do not su to root.
 
@@ -119,50 +123,70 @@ The following are prerequisites for installing the required development tools:
 1. Install CLI Tool:
 Note that you should not use su or sudo for the following npm commands.
 a. composer-cli
+
 npm install -g composer-cli@0.20
+
 b. generator-hyperledger-composer
 Useful utility for generating application assets:
+
 npm install -g generator-hyperledger-composer@0.20
+
 c. composer-rest-server
 Utility for running a REST Server on your machine to expose your business networks as RESTful APIs:
+
 npm install -g composer-rest-server@0.20
+
 d. Yeoman
 Yeoman is a tool for generating applications, which utilises generator-hyperledger-composer:
+
 npm install -g yo
 	
 2. Install Playground:
 You can run this locally on your development machine too, giving you a UI for viewing and demonstrating your business networks.
 Browser app for simple editing and testing Business Networks:
+
 npm install -g composer-playground@0.20
 
 3. Set up IDE
+
 Install VSCode or Atom
 
 4. Install Hyperledger Fabric
 This step gives you a local Hyperledger Fabric runtime to deploy your business networks to.
+
 a. In a directory of your choice (we will assume ~/fabric-dev-servers), get the .tar.gz file that contains the tools to install Hyperledger Fabric:
+
 mkdir ~/fabric-dev-servers && cd ~/fabric-dev-servers
 curl -O https://raw.githubusercontent.com/hyperledger/composer-tools/master/packages/fabric-dev-servers/fabric-dev-servers.tar.gz
 tar -xvf fabric-dev-servers.tar.gz
 
 b. Use the scripts you just downloaded and extracted to download a local Hyperledger Fabric v1.2 runtime:
+
 cd ~/fabric-dev-servers
 export FABRIC_VERSION=hlfv12
 ./downloadFabric.sh
-Start & Stop Hyperledger Fabric
+
+Start & Stop Hyperledger Fabric:
+
 ./startFabric.sh
 ./stopFabric.sh
-Created PeerAdmin Card
+
+Created PeerAdmin Card:
+
 ./createPeerAdminCard.sh
 
 c.
+
 export FABRIC_VERSION=hlfv12
 ./startFabric.sh
 ./createPeerAdminCard.sh
 
 5. Start the web app ("Playground"):
-    composer-playground
+
+	composer-playground
+
 Check:  http://localhost:8080/login
+
 We should see the PeerAdmin@hlfv1 Card you created with the createPeerAdminCard script on your "My Business Networks" screen in the web app: if you don't see this, you may not have correctly started up your runtime!
 
 
