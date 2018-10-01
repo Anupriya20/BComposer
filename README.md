@@ -1,4 +1,4 @@
-# BComposer
+#BComposer
 
 # Hyperledger Composer Introduction:
 What is Hyperledger Composer?
@@ -42,7 +42,7 @@ Hyperledger Composer is composed of the following high-level components:
 •	Yeoman code generator
 •	VSCode and Atom editor plugins
 
-Execution Runtimes:
+1.	Execution Runtimes:
 Hyperledger Composer has been designed to support different pluggable runtimes, and currently has three runtime implementations:
 •	Hyperledger Fabric v1.2: State is stored on the distributed ledger.
 •	Web: which executes within a web page, and is used by Playground. State is stored in browser local storage.
@@ -52,7 +52,7 @@ Connection Profiles are used across Hyperledger Composer to specify how to conne
 For example, the connection profile for a Hyperledger Fabric v1.2 runtime will contain the TCP/IP addresses and ports for the Fabric peers, as well as cryptographic certificates etc.
 Connection Profiles are part of Business Network cards.
 
-JavaScript SDK	
+2.	JavaScript SDK	
 The Hyperledger Composer JavaScript SDK is a set of Node.js APIs the enables developers to create applications to manage and interact with deployed business networks.
 The APIs are split between two npm modules:
 •	composer-client:
@@ -70,28 +70,28 @@ composer-admin:
 This module would usually be installed as a local dependency of administrative applications. 
 This API permits the creation of and deployment of business network definitions.
 
-Command Line Interface
+3.	Command Line Interface
 The composer command line tool enables developers and administrators to deploy and managed business network definitions.
 
-REST Server
+4.	REST Server
 automatically generates a Open API (Swagger) REST API for a business network. 
 (Based on LoopBack technology) converts the Composer model for a business network into an Open API definition, and at runtime implements Create, Read, Update and Delete support for assets and participants and allows transactions to be submitted for processing or retrieved.
 
-LoopBack Connector
+5.	LoopBack Connector
 The Hyperledger Composer LoopBack Connector is used by the Composer REST Server, however it may also be used standalone by integration tools that support LoopBack natively. 
 Alternatively it may be used with the LoopBack tools to create more sophisticated customizations of the REST APIs.
 
-Playground Web User Interface
+6.	Playground Web User Interface
 Hyperledger Composer Playground is a web user interface to define and test business networks. 
 It allows a business analyst to quickly import samples and prototype business logic that executes on the Web or Hyperledger Fabric runtime.
 
-Yeoman Code Generators
+7.	Yeoman Code Generators
 Hyperledger Composer uses the Open Source Yeoman code generator framework to create skeleton projects:
 •	Angular web application
 •	Node.js application
 •	Skeleton business network
 
-VSCode and Atom Editor Extensions
+8.	VSCode and Atom Editor Extensions
 Hyperledger Composer has community contributed editor extensions for VSCode and Atom. 
 The VSCode extension is very powerful and validates Composer model and ACL files, providing syntax highlighting, error detection and snippets support.
 The Atom plugin is much more rudimentary and only has basic syntax highlighting.	
@@ -118,7 +118,8 @@ The following are prerequisites for installing the required development tools:
 •	Login as a normal user, rather than root.
 •	Do not su to root.
 
-# Installing components
+
+## Installing components
 
 1. Install CLI Tool:
 Note that you should not use su or sudo for the following npm commands.
