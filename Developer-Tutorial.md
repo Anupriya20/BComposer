@@ -2,6 +2,7 @@
 
 
 #Step One: Creating a business network structure
+
 The key concept for is the business network definition (BND). It defines the data model, transaction logic and access control rules for your blockchain solution. To create a BND, we need to create a suitable project structure on disk.
 
 The easiest way to get started is to use the Yeoman generator to create a skeleton business network. This will create a directory containing all of the components of a business network.
@@ -43,29 +44,38 @@ After the runtime has been installed, a business network can be deployed to the 
 A PeerAdmin business network card with the correct credentials is already created as part of development environment installation.
 Deploying the business network
 Deploying a business network to the Hyperledger Fabric requires the Hyperledger Composer business network to be installed on the peer, then the business network can be started, and a new participant, identity, and associated card must be created to be the network administrator. Finally, the network administrator business network card must be imported for use, and the network can then be pinged to check it is responding.
+
 1.	To install the business network, from the tutorial-network directory, run the following command:
 
 composer network install --card PeerAdmin@hlfv1 --archiveFile tutorial-network@0.0.1.bna
+
 ex:
 ubuntu@ip-172-16-1-181:~/fabric-dev-servers/tutorial-network$ sudo composer network install --card PeerAdmin@hlfv1 --archiveFile tutorial-network@0.0.1.bna
+
 The composer network install command requires a PeerAdmin business network card (in this case one has been created and imported in advance), and the the file path of the .bna which defines the business network.
+
 2.	To start the business network, run the following command:
 
 composer network start --networkName tutorial-network --networkVersion 0.0.1 --networkAdmin admin --networkAdminEnrollSecret adminpw --card PeerAdmin@hlfv1 --file networkadmin.card
+
 ex:
 ubuntu@ip-172-16-1-181:~/fabric-dev-servers/tutorial-network$ sudo composer network start --networkName tutorial-network --networkVersion 0.0.1 --networkAdmin admin --networkAdminEnrollSecret adminpw --card PeerAdmin@hlfv1 --file networkadmin.card
+
 The composer network start command requires a business network card, as well as the name of the admin identity for the business network, the name and version of the business network and the name of the file to be created ready to import as a business network card.
 
 3.	To import the network administrator identity as a usable business network card, run the following command:
 
 composer card import --file networkadmin.card
+
 The composer card import command requires the filename specified in composer network start to create a card.
 
 4.	To check that the business network has been deployed successfully, run the following command to ping the network:
 
 composer network ping --card admin@tutorial-network
+
 ex:
 root@ip-172-16-1-181:/home/ubuntu/fabric-dev-servers/tutorial-network# composer network ping --card admin@tutorial-network
+
 The composer network ping command requires a business network card to identify the network to ping.
 
 #Step Five: Generating a REST server
