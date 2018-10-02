@@ -1,10 +1,10 @@
-gSTEPS FOR CREATING THE COMPOSER APP THROUGH UBUNTU
+# STEPS FOR CREATING THE COMPOSER APP THROUGH UBUNTU
 
-#Prerequisites:
+# Prerequisites:
 
 Please follow the README.md steps for Ubuntu
 
-#Step One: Creating a business network structure
+# Step One: Creating a business network structure
 
 The key concept for is the business network definition (BND). It defines the data model, transaction logic and access control rules for your blockchain solution. To create a BND, we need to create a suitable project structure on disk.
 
@@ -24,7 +24,7 @@ yo hyperledger-composer:businessnetwork
 
 5.	Select No when asked whether to generate an empty network or not.
 
-#Step Two: Defining a business network
+# Step Two: Defining a business network
 
 A business network is made up of assets, participants, transactions, access control rules, and optionally events and queries.
 In the skeleton business network created in the previous steps, there is a model (.cto) file which will contain the class definitions for all assets, participants, and transactions in the business network.
@@ -34,14 +34,14 @@ a package.json file containing business network metadata.
 Modelling assets, participants, and transactions
 The first document to update is the model (.cto) file. This file is written using the Hyperledger Composer Modelling Language. The model file contains the definitions of each class of asset, transaction, participant, and event. It implicitly extends the Hyperledger Composer System Model described in the modelling language documentation.
 
-#Step Three: Generate a business network archive
+# Step Three: Generate a business network archive
 
 Now that the business network has been defined, it must be packaged into a deployable business network archive (.bna) file.
 1.	Using the command line, navigate to the tutorial-network directory.
 2.	From the tutorial-network directory, run the following command
 3.	composer archive create -t dir -n .
 
-#Step Four: Deploying the business network
+# Step Four: Deploying the business network
 
 After creating the .bna file, the business network can be deployed to the instance of Hyperledger Fabric. Normally, information from the Fabric administrator is required to create a PeerAdmin identity, with privileges to deploy chaincode to the peer. However, as part of the development environment installation, a PeerAdminidentity has been created already.
 After the runtime has been installed, a business network can be deployed to the peer. For best practice, a new identity should be created to administrate the business network after deployment. This identity is referred to as a network admin.
@@ -82,7 +82,7 @@ root@ip-172-16-1-181:/home/ubuntu/fabric-dev-servers/tutorial-network# composer 
 
 The composer network ping command requires a business network card to identify the network to ping.
 
-#Step Five: Generating a REST server
+# Step Five: Generating a REST server
 
 Hyperledger Composer can generate a bespoke REST API based on a business network. For developing a web application, the REST API provides a useful layer of language-neutral abstraction.
 
@@ -102,7 +102,7 @@ composer-rest-server
 
 The generated API is connected to the deployed blockchain and business network.
 
-#Step Six: Generating an application
+# Step Six: Generating an application
 
 Hyperledger Composer can also generate an Angular 4 application running against the REST API.
 1.	To create your Angular 4 application, navigate to tutorial-network directory and run the following command:
