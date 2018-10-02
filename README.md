@@ -1,4 +1,4 @@
-#BComposer
+# BComposer
 
 # Hyperledger Composer Introduction:
 What is Hyperledger Composer?
