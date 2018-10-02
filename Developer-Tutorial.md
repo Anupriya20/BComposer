@@ -1,5 +1,8 @@
-gSTEPS FOR CREATING THE COMPOSER APP THROUGH UBUNTU
+#STEPS FOR CREATING THE COMPOSER APP THROUGH UBUNTU
 
+#Prerequisites:
+
+Please follow the README.md steps for Ubuntu
 
 #Step One: Creating a business network structure
 
@@ -82,19 +85,23 @@ The composer network ping command requires a business network card to identify t
 #Step Five: Generating a REST server
 
 Hyperledger Composer can generate a bespoke REST API based on a business network. For developing a web application, the REST API provides a useful layer of language-neutral abstraction.
+
 1.	To create the REST API, navigate to the tutorial-network directory and run the following command:
+
 composer-rest-server
 2.	Enter admin@tutorial-network as the card name.
 3.	Select never use namespaces when asked whether to use namespaces in the generated API.
 4.	Select No when asked whether to secure the generated API.
 5.	Select Yes when asked whether to enable event publication.
 6.	Select No when asked whether to enable TLS security.
+
 The generated API is connected to the deployed blockchain and business network.
 
 #Step Six: Generating an application
 
 Hyperledger Composer can also generate an Angular 4 application running against the REST API.
 1.	To create your Angular 4 application, navigate to tutorial-network directory and run the following command:
+
 yo hyperledger-composer:angular
 2.	Select Yes when asked to connect to running business network.
 3.	Enter standard package.json questions (project name, description, author name, author email, license)
