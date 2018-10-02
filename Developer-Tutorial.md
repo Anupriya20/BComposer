@@ -1,4 +1,4 @@
-#STEPS FOR CREATING THE COMPOSER APP THROUGH UBUNTU
+gSTEPS FOR CREATING THE COMPOSER APP THROUGH UBUNTU
 
 #Prerequisites:
 
@@ -89,10 +89,15 @@ Hyperledger Composer can generate a bespoke REST API based on a business network
 1.	To create the REST API, navigate to the tutorial-network directory and run the following command:
 
 composer-rest-server
+
 2.	Enter admin@tutorial-network as the card name.
+
 3.	Select never use namespaces when asked whether to use namespaces in the generated API.
+
 4.	Select No when asked whether to secure the generated API.
+
 5.	Select Yes when asked whether to enable event publication.
+
 6.	Select No when asked whether to enable TLS security.
 
 The generated API is connected to the deployed blockchain and business network.
@@ -103,12 +108,19 @@ Hyperledger Composer can also generate an Angular 4 application running against 
 1.	To create your Angular 4 application, navigate to tutorial-network directory and run the following command:
 
 yo hyperledger-composer:angular
+
 2.	Select Yes when asked to connect to running business network.
+
 3.	Enter standard package.json questions (project name, description, author name, author email, license)
+
 4.	Enter admin@tutorial-network for the business network card.
+
 5.	Select Connect to an existing REST API
+
 6.	Enter http://localhost for the REST server address.
+
 7.	Enter 3000 for server port.
+
 8.	Select Namespaces are not used
 
 The Angular generator will then create the scaffolding for the project and install all dependencies. To run the application, navigate to your angular project directory and run npm start . This will fire up an Angular 4 application running against your REST API at http://localhost:4200 
