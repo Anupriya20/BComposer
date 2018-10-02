@@ -1,4 +1,4 @@
-#STEPS FOR CREATING THE COMPOSER APP THROUGH UBUNTU
+gSTEPS FOR CREATING THE COMPOSER APP THROUGH UBUNTU
 
 
 #Step One: Creating a business network structure
@@ -10,6 +10,7 @@ The easiest way to get started is to use the Yeoman generator to create a skelet
 1.	Create a skeleton business network using Yeoman. This command will require a business network name, description, author name, author email address, license selection and namespace.
 
 Do not run the command using root 
+
 yo hyperledger-composer:businessnetwork
 
 2.	Enter tutorial-network for the network name, and desired information for description, author name, and author email.
